@@ -47,38 +47,54 @@
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <button onclick="sum();">+</button>
-            <button onclick="diff();">-</button>
-            <button onclick="mult();">X</button>
-            <button onclick="div();">/</button>
-        </div>
-        <div id="Tell"></div>
+    <form name="Count" class="Count">
+        <label>Введите первое число:
+            <input type="number" name="first_number" class="first_number"> </label>
+        <label>Введите второе число:
+            <input type="number" name="second_number" class="second_number"> </label>
+    </form>
+    <div class="container">
+        <button type="submit" onclick="sum();">+</button>
+        <button type="submit" onclick="diff();">-</button>
+        <button type="submit" onclick="mult();">X</button>
+        <button type="submit" onclick="div();">/</button>
+    </div>
+    <div id="Sum"></div>
+    <div id="Diff"></div>
+    <div id="Mult"></div>
+    <div id="Div"></div>
     </main>
     <script>
         function sum() {
-            let numb1 = prompt('Введите первое число');
-            let numb2 = prompt('Введите второе число');
-            alert("Сумма = " + (Number(numb1) + Number(numb2)));
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            document.querySelector('#Sum').innerHTML = "Сумма = " + (Number(numb1) + Number(numb2));
         }
 
         function diff() {
-            let numb1 = prompt('Введите первое число');
-            let numb2 = prompt('Введите второе число');
-            alert("Разность = " + (Number(numb1) - Number(numb2)));
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            document.querySelector('#Diff').innerHTML = "Разность = " + (Number(numb1) - Number(numb2));
         }
 
         function mult() {
-            let numb1 = prompt('Введите первое число');
-            let numb2 = prompt('Введите второе число');
-            alert("Произведение = " + (Number(numb1) * Number(numb2)));
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            document.querySelector('#Mult').innerHTML = "Произведение = " + (Number(numb1) * Number(numb2));
         }
 
         function div() {
-            let numb1 = prompt('Введите первое число');
-            let numb2 = prompt('Введите второе число');
-            alert("Частное = " + (Number(numb1) / Number(numb2)));
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            document.querySelector('#Div').innerHTML = "Частное = " + (Number(numb1) / Number(numb2));
         }
     </script>
 </body>

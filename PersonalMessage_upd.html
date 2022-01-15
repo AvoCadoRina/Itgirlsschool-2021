@@ -62,6 +62,10 @@
             transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
         }
         
+        .submit-button {
+            background-color: rgb(200, 238, 238);
+        }
+        
         @keyframes rotateAngle {
             0% {
                 transform: rotateY(0deg) rotateX(10deg);
@@ -86,12 +90,18 @@
 
 <body>
     <main>
+        <form name="Name" class="Name">
+            <label>Пожалуйста, представьтесь:
+                <input type="text" name="tag_name" class="tag_name"> </label>
+        </form>
         <button type="submit" onclick="alerted();"> START</button>
-        <div id="Tell"></div>
+        <div id="Tell">
+        </div>
     </main>
     <script>
         function alerted() {
-            const name = prompt('Пожалуйста, представьтесь?');
+            let tag_name = document.querySelector('.tag_name');
+            const name = tag_name.value;
             document.querySelector('#Tell').innerHTML = `<b>${name}</b>, добро пожаловать в игру!`;
         }
     </script>
