@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blue {
+    background-color: rgb(23, 23, 197);
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.yellow {
+    background-color: #f79981;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.green {
+    background-color: rgb(19, 179, 19);
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.red {
+    background-color: rgb(230, 24, 24);
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
