@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+            display: flex;
+        }
+        
+        body {
+            position: relative;
+            margin: auto;
+            background: rgb(195, 223, 93);
+            perspective: 500px;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        button {
+            display: block;
+            position: relative;
+            margin: 0.5em 0;
+            padding: .8em 2.2em;
+            cursor: pointer;
+            background: #FFFFFF;
+            border: none;
+            border-radius: .4em;
+            text-transform: uppercase;
+            font-size: 1.4em;
+            font-family: "Work Sans", sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            mix-blend-mode: color-dodge;
+            perspective: 500px;
+            transform-style: preserve-3d;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <button onclick="sum();">+</button>
+            <button onclick="diff();">-</button>
+            <button onclick="mult();">X</button>
+            <button onclick="div();">/</button>
+        </div>
+        <div id="Tell"></div>
+    </main>
+    <script>
+        function sum() {
+            let numb1 = prompt('Введите первое число');
+            let numb2 = prompt('Введите второе число');
+            alert("Сумма = " + (Number(numb1) + Number(numb2)));
+        }
+
+        function diff() {
+            let numb1 = prompt('Введите первое число');
+            let numb2 = prompt('Введите второе число');
+            alert("Разность = " + (Number(numb1) - Number(numb2)));
+        }
+
+        function mult() {
+            let numb1 = prompt('Введите первое число');
+            let numb2 = prompt('Введите второе число');
+            alert("Произведение = " + (Number(numb1) * Number(numb2)));
+        }
+
+        function div() {
+            let numb1 = prompt('Введите первое число');
+            let numb2 = prompt('Введите второе число');
+            alert("Частное = " + (Number(numb1) / Number(numb2)));
+        }
+    </script>
+</body>
+
+</html>
