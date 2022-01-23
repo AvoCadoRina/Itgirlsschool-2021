@@ -94,7 +94,11 @@
             const numb1 = first_number.value;
             let second_number = document.querySelector('.second_number');
             const numb2 = second_number.value;
-            document.querySelector('#Div').innerHTML = "Частное = " + (Number(numb1) / Number(numb2));
+            if (numb2 == 0) {
+                document.querySelector('#Div').innerHTML = "На ноль делить нельзя!";
+            } else {
+                document.querySelector('#Div').innerHTML = "Частное = " + (Number(numb1) / Number(numb2));
+            }
         }
     </script>
 </body>
