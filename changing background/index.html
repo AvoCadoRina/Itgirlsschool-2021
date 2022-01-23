@@ -10,10 +10,16 @@
 </head>
 
 <body>
-    <div class="blue">Вначале я был синий</div>
-    <div class="yellow">Вначале я был желтый</div>
-    <div class="red">Вначале я был красный</div>
-    <div class="green">Вначале я был зеленый</div>
+    <header>
+        <p>Choose color</p>
+        <select id="bgchoice" onchange="changeBG()">
+            <option>White</option>
+            <option value="#b3f6b3">Green</option>
+            <option value="#f5bde7">Pink</option>
+            <option value="#f3f18d">Yellow</option>
+        </select>
+        <h1>This is my site</h1>
+    </header>
 
     <script src="app.js"></script>
 </body>
