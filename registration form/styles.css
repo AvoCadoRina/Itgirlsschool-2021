@@ -1,0 +1,138 @@
+body {
+    font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
+    background: #e9e9e9;
+}
+
+.signup__container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: remy(800px);
+    height: remy(480px);
+    border-radius: remy(3px);
+    box-shadow: 0px remy(3px) remy(7px) rgba(0, 0, 0, .25);
+}
+
+.signup__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .76);
+}
+
+.container__child {
+    width: 50%;
+    height: 100%;
+    color: #fff;
+}
+
+.signup__thumbnail {
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.thumbnail__content,
+.thumbnail__links {
+    position: relative;
+    z-index: 2;
+}
+
+.thumbnail__content {
+    align-self: center;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+.heading--primary {
+    font-size: 1.999rem;
+}
+
+.heading--secondary {
+    font-size: 1.414rem;
+}
+
+.thumbnail__links a {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.signup__form {
+    padding: 2.5rem;
+    background: #fafafa;
+}
+
+label {
+    font-size: .85rem;
+    text-transform: uppercase;
+    color: rgb(2, 19, 6);
+}
+
+.form-control {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+}
+
+[type="text"] {
+    color: #111;
+}
+
+[type="password"] {
+    color: #111;
+}
+
+#Tell {
+    color: rgb(29, 28, 28);
+    background-color: #b1fb93;
+    width: 300px;
+}
+
+button {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #92DE34;
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #025600;
+    background-size: 100% 100%;
+    box-shadow: 0 0 0 7px #92DE34 inset;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-image: linear-gradient( 145deg, transparent 10%, #69BC22 10% 20%, transparent 20% 30%, #69BC22 30% 40%, transparent 40% 50%, #69BC22 50% 60%, transparent 60% 70%, #69BC22 70% 80%, transparent 80% 90%, #69BC22 90% 100%);
+    animation: background 3s linear infinite;
+}
+
+@keyframes background {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400px 0;
+    }
+}
