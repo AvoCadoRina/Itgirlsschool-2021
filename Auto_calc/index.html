@@ -1,17 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор стоимости машины</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-
+    <div class="row col-md-6 all_form">
+        <h1>Калькулятор стоимости авто</h1>
+        <form>
+            <div class="data_block">
+                <h4 class="header">Цена на аукционе, $</h4>
+                <input type="number" name="price_old" class="data" id="price_old" required="" placeholder="1500" required="" />
+            </div>
+            <div class="data_block">
+                <h4 class="header">Аукцион</h4>
+                <select id="mySelectId" name="mySelect" class="data">
+                    <option value="str0"> По умолчанию ($10.000) </option>
+                    <option value="str1"> менее $10.000 </option>
+                    <option value="str2"> $10.000-20.000 </option>
+                    <option value="str2"> $20.000-40.000 </option>
+                    <option value="str2"> более $40.000 </option>
+                </select>
+            </div>
+            <div class="data_block">
+                <h4 class="header">Тип услуги</h4>
+                <div class="data">
+                    <input type="radio" name="type" id="type1" checked="true" />
+                    <label class="type" for="type1">Целый автомобиль</label>
+                    <input type="radio" name="type" id="type2" />
+                    <label for="type2">Распил легкового</label>
+                    <input type="radio" name="type" id="type3" />
+                    <label for="type3">Распил рамный</label>
+                    <input type="radio" name="type" id="type4" />
+                    <label for="type4">Конструктор легковой</label>
+                    <input type="radio" name="type" id="type5" />
+                    <label for="type5">Запчасти на паллете</label>
+                </div>
+            </div>
+            <div class="data_block">
+                <h4 class="header">Возраст автомобиля</h4>
+                <div class="data">
+                    <input type="radio" name="age" id="age1" checked="true" />
+                    <label class="age" for="age1">Менее года</label>
+                    <input type="radio" name="age" id="age2" />
+                    <label for="age2">1-3 года</label>
+                    <input type="radio" name="age" id="age3" />
+                    <label for="age3">3-5 лет</label>
+                    <input type="radio" name="age" id="age4" />
+                    <label for="age4">5-7 лет</label>
+                    <input type="radio" name="age" id="age5" />
+                    <label for="age5">более 7 лет</label>
+                </div>
+            </div>
+            <div class="data_block">
+                <h4 class="header">Тип топлива</h4>
+                <div class="data">
+                    <input type="radio" name="fuel" id="fuel1" checked="true" />
+                    <label class="fuel" for="fuel1">Бензин (включая гибридное)</label>
+                    <input type="radio" name="fuel" id="fuel2" />
+                    <label for="fuel2">Дизельное топливо</label>
+                    <input type="radio" name="fuel" id="fuel3" />
+                    <label for="fuel3">Электричество</label>
+                </div>
+            </div>
+            <div class="data_block">
+                <h4 class="header">Объем двигателя, см</h4>
+                <input type="number" name="volume" class="data" id="volume" required="" placeholder="10" required="" />
+            </div>
+            <div class="data_block">
+                <h4 class="header">Мощность, л. с.</h4>
+                <input type="number" name="capacity" class="data" id="capacity" required="" placeholder="150" required="" />
+            </div>
+            <div class="data_block">
+                <h4 class="header">Покупатель</h4>
+                <div class="data">
+                    <input type="radio" name="buyer" id="buyer1" checked="true" />
+                    <label class="buyer" for="buyer1">Физическое лицо</label>
+                    <input type="radio" name="buyer" id="buyer2" />
+                    <label for="buyer2">Юридическое лицо</label>
+                </div>
+            </div>
+            <div class="data_block">
+                <button onclick="raschitat();" id="btn" class="button">Считать</button>
+            </div>
+        </form>
+    </div>
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
