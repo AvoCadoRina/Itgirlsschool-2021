@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+            display: flex;
+        }
+        
+        body {
+            position: relative;
+            margin: auto;
+            background: rgb(195, 223, 93);
+            perspective: 500px;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        button {
+            display: block;
+            position: relative;
+            margin: 0.5em 0;
+            padding: .8em 2.2em;
+            cursor: pointer;
+            background: #FFFFFF;
+            border: none;
+            border-radius: .4em;
+            text-transform: uppercase;
+            font-size: 1.4em;
+            font-family: "Work Sans", sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            mix-blend-mode: color-dodge;
+            perspective: 500px;
+            transform-style: preserve-3d;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="Count" class="Count">
+        <label>Введите первое число:
+            <input type="number" name="first_number" class="first_number"> </label>
+        <label>Введите второе число:
+            <input type="number" name="second_number" class="second_number"> </label>
+    </form>
+    <div class="container">
+        <button type="submit" onclick="sum();">+</button>
+        <button type="submit" onclick="diff();">-</button>
+        <button type="submit" onclick="mult();">X</button>
+        <button type="submit" onclick="div();">/</button>
+    </div>
+    <div id="Sum"></div>
+    <div id="Diff"></div>
+    <div id="Mult"></div>
+    <div id="Div"></div>
+    </main>
+    <script>
+        function sum() {
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            document.querySelector('#Sum').innerHTML = "Сумма = " + (Number(numb1) + Number(numb2));
+        }
+
+        function diff() {
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            document.querySelector('#Diff').innerHTML = "Разность = " + (Number(numb1) - Number(numb2));
+        }
+
+        function mult() {
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            document.querySelector('#Mult').innerHTML = "Произведение = " + (Number(numb1) * Number(numb2));
+        }
+
+        function div() {
+            let first_number = document.querySelector('.first_number');
+            const numb1 = first_number.value;
+            let second_number = document.querySelector('.second_number');
+            const numb2 = second_number.value;
+            if (numb2 == 0) {
+                document.querySelector('#Div').innerHTML = "На ноль делить нельзя!";
+            } else {
+                document.querySelector('#Div').innerHTML = "Частное = " + (Number(numb1) / Number(numb2));
+            }
+        }
+    </script>
+</body>
+
+</html>
