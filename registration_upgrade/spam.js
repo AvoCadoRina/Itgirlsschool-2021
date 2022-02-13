@@ -13,3 +13,11 @@ function checkSpam(str) {
     return newStr
 }
 console.log(checkSpam(oldstr));
+
+let strings = [];
+
+function copyText() {
+    val = document.getElementById('inp1').value;
+    strings.push(val);
+    document.getElementById('div1').innerHTML = strings.join('\n');
+}
