@@ -1,23 +1,11 @@
-let newStr = "";
-let oldstr = prompt('Type your message', '');
-
-function checkSpam(str) {
-    let lowerStr = str.toLowerCase();
-    if (lowerStr.includes('viagra')) {
-        newStr = str.replace(/viagra/g,  "***");
-    } else if (lowerStr.includes('xxx')) {
-        newStr = str.replace(/xxx/g,  "***");
-    } else {
-        newStr = str;
-    }
-    return newStr
-}
-console.log(checkSpam(oldstr));
-
-let strings = [];
-
-function copyText() {
-    val = document.getElementById('inp1').value;
-    strings.push(val);
+function checkSpam() {
+    let strings = [];
+    let newStr = "";
+    let str = document.getElementById("str").value;
+    let newstring = str.toString();
+    let lowerStr = newstring.toLowerCase();
+    x = lowerStr.replace(/viagra/g,  "***");
+    y = x.replace(/xxx/g,  "***");
+    strings.push(y);
     document.getElementById('div1').innerHTML = strings.join('\n');
 }

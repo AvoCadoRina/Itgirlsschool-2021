@@ -1,0 +1,148 @@
+span,
+input {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 1.75em;
+  padding: .25em .5em .3125em;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: .25em;
+  background: transparent;
+  -webkit-transition: all .100s;
+  transition: all .100s;
+}
+
+input:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+span.keyup {
+  color: white;
+  border-color: white;
+  text-shadow: 0 0 .125em white;
+  -webkit-box-shadow: 0 0 .25em white, inset 0 0 .25em white;
+          box-shadow: 0 0 .25em white, inset 0 0 .25em white;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+input {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 .125em transparent;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: .5;
+}
+
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 .125em transparent;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+input:focus::-moz-placeholder {
+  opacity: .5;
+}
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 .125em transparent;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+input:focus:-ms-input-placeholder {
+  opacity: .5;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  -webkit-box-shadow: inset 0 0 5em #000;
+          box-shadow: inset 0 0 5em #000;
+  background: url(/assets/les.jpg) no-repeat;
+  background-size: cover;
+}
+
+input {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  bottom: 4em;
+  left: 50%;
+  width: 11em;
+  margin-left: -5.5em;
+}
+
+.btn {
+  text-decoration: none;
+  color: beige;
+  background-color: #4e4e80;
+  border: 1px solid #9294f8;
+  position: relative;
+  overflow: hidden;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  bottom: 4em;
+  left: 50%;
+  width: 100px;
+  height: 30px;
+  margin-left: -5.5em;
+  border-radius: 9%;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+          box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+.mails {
+  background-color: rgba(255, 255, 255, 0.37);
+  color: black;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 200px;
+  left: 45%;
+  min-height: 100px;
+  width: 300px;
+  margin-left: -5.5em;
+  padding: 20px 0 0 20px;
+}
+/*# sourceMappingURL=style.css.map */
