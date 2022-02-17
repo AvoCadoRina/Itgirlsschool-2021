@@ -37,15 +37,15 @@
                     <input class="form-control" type="text" name="email" id="email" placeholder="ivanoff@mail.com" required />
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input class="form-control" type="password" name="password" id="password" placeholder="********" required />
+                    <label for="password" data-title="6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter" class="help_pass">Password</label>
+                    <input class="form-control pass_add" type="password" name="password" id="password" placeholder="********" required />
                 </div>
                 <div class="form-group">
                     <label for="passwordRepeat">Repeat Password</label>
                     <input class="form-control" type="password" name="passwordRepeat" id="passwordRepeat" placeholder="********" required />
                 </div>
             </form>
-            <button class="button" type="submit" onclick="alerted(); Hello();">
+            <button class="button" type="submit" onclick="alerted();validation();">
                 Submit
             </button>
             <div id="Tell"></div>
@@ -53,6 +53,7 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="validation.js"></script>
 </body>
 
 </html>

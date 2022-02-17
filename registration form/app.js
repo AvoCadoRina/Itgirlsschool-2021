@@ -51,11 +51,3 @@ function alerted() {
         n6.style.backgroundColor = "white";
     }
 };
-
-
-
-function Hello() {
-    let tag_name = document.getElementById('username');
-    const name = tag_name.value;
-    document.querySelector('#Tell').innerHTML = `<b>${name}</b>, добро пожаловать в CatsTube!`;
-}
