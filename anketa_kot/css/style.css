@@ -1,0 +1,72 @@
+.button {
+  background: linear-gradient(135deg, #753370 0%, #298096 100%);
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  width: 100%;
+  letter-spacing: .11rem;
+  outline: none;
+}
+
+.button:hover {
+  -webkit-transform: scale(1.05) translateY(-3px);
+          transform: scale(1.05) translateY(-3px);
+  -webkit-box-shadow: 3px 3px 6px #38373785;
+          box-shadow: 3px 3px 6px #38373785;
+}
+
+.leftside {
+  background: #753370;
+  width: 25rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.rightside {
+  background-color: #ffffff60;
+  width: 35rem;
+  border-bottom-right-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 1rem 2rem 3rem 3rem;
+}
+
+.anketa {
+  width: 60rem;
+  margin: auto;
+  background: white;
+  position: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  top: 50rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 4px 3px 20px #3535358c;
+          box-shadow: 4px 3px 20px #3535358c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: .8rem 0;
+}
+/*# sourceMappingURL=style.css.map */
