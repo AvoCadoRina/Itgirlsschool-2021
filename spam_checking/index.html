@@ -10,8 +10,18 @@
 </head>
 
 <body>
-    <div id="div1" class="mails"></div>
+    <div id="div1" class="mails">
+        <img src="" height="30" alt="Avatar">
+        <div id="div1"></div>
+        <div id="time-right"></div>
+    </div>
+    <input type="text" placeholder="Type your name" id="user" />
+    <input type="file" class="file help_avatar" name="avatar" id="avatar" data-title="Download your avatar" />
     <input type="text" placeholder="Type your message" id="str" />
+    <div class="saveornot">
+        <p> Save your information?</p>
+        <input type="checkbox" name="saving" value="1" id="saving" /> Yes<br />
+    </div>
     <button class="btn" onClick="checkSpam();">Send</button>
     <script src="app.js"></script>
     <script src="spam.js"></script>
