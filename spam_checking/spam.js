@@ -1,3 +1,6 @@
+"use strict";
+var button = document.getElementById("button");
+
 function checkSpam() {
     let strings = [];
     let fotos = [];
@@ -8,9 +11,9 @@ function checkSpam() {
     let newstring = str.toString();
     let lowerStr = newstring.toLowerCase();
     let data_user = document.getElementById("user").value;
-    x = lowerStr.replace(/viagra/g,  "***");
-    y = x.replace(/xxx/g,  "***");
-    z = y + '' + '"send by ' + data_user + '"';
+    let x = lowerStr.replace(/viagra/g,  "***");
+    let y = x.replace(/xxx/g,  "***");
+    let z = y + '' + '"send by ' + data_user + '"';
     strings.push(z);
     var now = new Date();
     timeright.innerHTML += now.toLocaleTimeString() + '<br>';
@@ -31,4 +34,6 @@ function checkSpam() {
     if (saving.checked) {
         localStorage.setItem(data_user, file);
     }
-}
+};
+
+button.addEventListener("click", checkSpam);
