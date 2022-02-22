@@ -1,3 +1,5 @@
+"use strict";
+
 function formatDate(date) {
     let diff = new Date() - date;
     let sec = Math.floor(diff / 1000);
@@ -19,5 +21,5 @@ function formatDate(date) {
         return min + ' мин. назад';
     } else return all_data.slice(0, 3).join('.') + ' ' + all_data.slice(3).join(':');
 
-}
-alert(formatDate(new Date(new Date - 86400 * 1000)));
+};
+return (formatDate(new Date(new Date - 86400 * 1000)));
