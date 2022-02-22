@@ -16,19 +16,13 @@ function addNameSurnameFathername() {
     surname = surname.toLowerCase();
     firstname = firstname.toLowerCase();
     fathername = fathername.toLowerCase();
-    for (;;) {
-        var FirstLetterUppercase = function(str) {
-            let fullstr = str.toUpperCase();
-            let finalstr = fullstr[0] + str.slice(1);
-            return finalstr;
-        };
-    };
-
-    finalValue += surname.FirstLetterUppercase();
-    finalValue += '\n Имя:';
-    finalValue += firstname.FirstLetterUppercase();
-    finalValue += '\n Отчество:';
-    finalValue += fathername.FirstLetterUppercase();
+    fathername_upper = fathername.toUpperCase();
+    fathername_fin = fathername_upper[0] + fathername.slice(1)
+    surname_upper = surname.toUpperCase();
+    surname_fin = surname_upper[0] + surname.slice(1)
+    firstname_upper = firstname.toUpperCase();
+    firstname_fin = firstname_upper[0] + firstname.slice(1)
+    finalValue += surname_fin + '\n' + 'Имя' + firstname_fin + '\n Отчество:' + fathername_fin;
     document.getElementById('newdata').innerHTML = finalValue;
 };
 
