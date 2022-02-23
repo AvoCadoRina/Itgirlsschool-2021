@@ -38,23 +38,25 @@
                 </div>
                 <div>
                     <p> Предпочтения в еде </p>
-                    <input type="checkbox" name="food" value="1" /> Сухой корм<br />
-                    <input type="checkbox" name="food" value="2" /> Влажный корм <br />
-                    <input type="checkbox" name="food" value="3" /> Натуральный корм <br />
+                    <input type="checkbox" name="food" value="1" class="checkbox" /> Сухой корм<br />
+                    <input type="checkbox" name="food" value="2" class="checkbox" /> Влажный корм <br />
+                    <input type="checkbox" name="food" value="3" class="checkbox" /> Натуральный корм <br />
                 </div>
                 <div>
                     <textarea rows="5" cols="50">Комментарий владельца</textarea>
                 </div>
-                <div><label for="name"> Пол питомца </label><br /> Самка <input type="radio" name="sex" /> <br /> Самец
+                <div><label for="name"> Пол питомца </label><br /> Самка <input type="radio" name="sex" required />
+                    <br /> Самец
                     <input type="radio" name="sex" required /> <br />
                 </div>
                 <div><label for="foto"> Приложить фото питомца </label>
                     <input type="file" id="foto">
                 </div>
-                <input class="button" type="submit" value="Отправить" />
+                <input class="button" type="submit" value="Отправить" id="button" />
             </form>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
