@@ -25,7 +25,7 @@
                     <input class="form-control" type="text" name="name" id="name" placeholder="Ivan" required />
                 </div>
                 <div class="form-group">
-                    <label for="name">Surname</label>
+                    <label for="surname">Surname</label>
                     <input class="form-control" type="text" name="surname" id="surname" placeholder="Ivanoff" required />
                 </div>
                 <div class="form-group">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input class="form-control" type="text" name="email" id="email" placeholder="ivanoff@mail.com" required />
+                    <input class="form-control" type="email" name="email" id="email" placeholder="ivanoff@mail.com" required />
                 </div>
                 <div class="form-group">
                     <label for="password" data-title="6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter" class="help_pass">Password</label>
@@ -45,15 +45,13 @@
                     <input class="form-control" type="password" name="passwordRepeat" id="passwordRepeat" placeholder="********" required />
                 </div>
             </form>
-            <button class="button" type="submit" onclick="alerted();validation();">
+            <button class="button" type="submit" id="button">
                 Submit
             </button>
             <div id="Tell"></div>
         </div>
     </div>
-
     <script src="app.js"></script>
-    <script src="validation.js"></script>
 </body>
 
 </html>

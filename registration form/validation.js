@@ -1,23 +1,23 @@
 function validation() {
-    a1 = document.getElementById('password');
-    a2 = document.getElementById('passwordRepeat');
-    a3 = a1.value;
-    a4 = document.getElementById('name');
-    a5 = a4.value;
-    a6 = document.getElementById('surname');
-    a7 = a6.value;
-    a8 = document.getElementById('email');
-    a9 = a8.value;
+    let Password = document.getElementById('password');
+    let PasswordRepeat = document.getElementById('passwordRepeat');
+    let Password_str = Password.value;
+    let NameOfUser = document.getElementById('name');
+    let NameOfUser_str = NameOfUser.value;
+    let SurnameOfUser = document.getElementById('surname');
+    let SurnameOfUser_str = SurnameOfUser.value;
+    let EmailOfUser = document.getElementById('email');
+    let EmailOfUser_str = EmailOfUser.value;
     passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     surname = /^[A-ZА-яa-zа-я]+$/;
     email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    if (a1.value != a2.value) {
+    if (Password.value != PasswordRepeat.value) {
         alert("Passwords doesnot match!");
-    } else if (!a3.match(passw)) {
+    } else if (!Password_str.match(passw)) {
         alert('Password rules: 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter');
-    } else if (!a5.match(surname) || !a7.match(surname)) {
+    } else if (!NameOfUser_str.match(surname) || !SurnameOfUser_str.match(surname)) {
         alert('Name and surname must have alphabetcharactersonly')
-    } else if (!a9.match(email)) {
+    } else if (!EmailOfUser_str.match(email)) {
         alert('You have entered an invalid email address!')
     } else {
         let tag_name = document.getElementById('username');
