@@ -5,25 +5,19 @@ body {
     font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, san-serif;
 }
 
-article,
-footer,
-header {
-    display: block;
+.NewNote {
+    position: absolute;
+    background-color: rgb(185, 218, 251);
+    width: 300px;
+    min-height: 300px;
+    margin-left: 20px;
 }
 
-article {
-    width: 880px;
-    background: #fff;
-    margin: auto;
-    padding: 40px;
-}
-
-article header {
-    color: #474747;
-    border-bottom: 1px solid #474747
-}
-
-article footer {
-    font-size: 90%;
-    color: #ccc;
+.ForWrite {
+    background-color: rgb(185, 218, 251);
+    width: 200px;
+    min-height: 200px;
+    padding: 20px;
+    margin: 20px;
+    resize: none;
 }
