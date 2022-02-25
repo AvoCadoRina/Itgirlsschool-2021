@@ -16,46 +16,14 @@ function addNewDiv() {
     container.appendChild(CloseButton);
 };
 
-
-
 button.addEventListener('click', addNewDiv);
 
 
-
-createSticky = function createSticky(data) {
-    data = data || { id: +new Date(), top: "40px", left: "40px", text: "Напиши заметку здесь" }
-    return $("<div />", {
-            "class": "sticky",
-            'id': data.id
-        })
-        .prepend($("<div />", { "class": "sticky-header" })
-            .append($("<span />", {
-                "class": "status-sticky",
-                click: saveSticky
-            }))
-            .append($("<span />", {
-                "class": "close-sticky",
-                text: "Удалить",
-                click: function() { deleteSticky($(this).parents(".sticky").attr("id")); }
-            }))
-        )
-        .append($("<div />", {
-            html: data.text,
-            contentEditable: true,
-            "class": "sticky-content",
-            keypress: markUnsaved
-        }))
-        .draggable({
-            handle: "div.sticky-header",
-            stack: ".sticky",
-            start: markUnsaved,
-            stop: saveSticky
-        })
-        .css({
-            position: "absolute",
-            "top": data.top,
-            "left": data.left
-        })
-        .focusout(saveSticky)
-        .appendTo(document.body);
+let delbuttons = document.getElementsByClassName("deleteTHis");
+if (delbuttons.length !== 0) {
+    delbuttons.forEach(function(item) {
+        item.addEventListener("click", function() {
+            item.parentNode.parentNode.removeChild(item.parentNode);
+        });
+    });
 };
