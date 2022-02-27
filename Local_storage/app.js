@@ -10,66 +10,42 @@ function addNewDiv() {
     let texting = document.createElement('textarea');
     texting.className = "ForWrite";
     container.appendChild(texting);
+    let SaveButton = document.createElement("button");
+    SaveButton.className = 'SaveThis';
+    SaveButton.innerHTML = 'Сохранить';
+    container.appendChild(SaveButton);
     let CloseButton = document.createElement("button");
     CloseButton.className = 'deleteTHis';
     CloseButton.innerHTML = 'Удалить';
     container.appendChild(CloseButton);
+    localStorage.setItem(container.id, $(container).html());
 };
 
 button.addEventListener('click', addNewDiv);
 
 
-let delbuttons = document.getElementsByClassName("deleteTHis");
-if (delbuttons.length !== 0) {
-    delbuttons.forEach(function(item) {
-        item.addEventListener("click", function() {
-            item.parentNode.parentNode.removeChild(item.parentNode);
-        });
+let delbuttons = document.getElementsByClassName(".deleteTHis");
+for (let i = 0; delbuttons.length; i++) {
+    delbuttons[i].addEventListener("click", function() {
+        item.remove();
     });
 };
 
-
-//Make the DIV element draggagle:
-dragElement(document.getElementsByClassName(("NewNote")));
-
-dragElement.forEach(function dragElement(elmnt) {
-    var pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
-    }
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
+$(function DragNote() {
+    $(".NewNote").draggable();
 });
+
+let savebuttons = document.getElementsByClassName(".SaveThis");
+for (let i = 0; savebuttons.length; i++) {
+    savebuttons[i].addEventListener("click", function SaveNote() {
+        let id = $(this).parents('.NewNote').attr('id');
+        let div = document.getElementById(id);
+        obj = {
+            id: div.attr("id"),
+            top: div.css("top"),
+            left: div.css("left"),
+            text: div.children(".ForWrite").html()
+        };
+        localStorage.setItem("Note-" + obj.id, JSON.stringify(obj));
+    });
+};
