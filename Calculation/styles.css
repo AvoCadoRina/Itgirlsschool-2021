@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    display: flex;
+}
+
+body {
+    position: relative;
+    margin: auto;
+    background: rgb(195, 223, 93);
+    perspective: 500px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    display: block;
+    position: relative;
+    margin: 0.5em 0;
+    padding: .8em 2.2em;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: none;
+    border-radius: .4em;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    mix-blend-mode: color-dodge;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    width: 150px;
+}
