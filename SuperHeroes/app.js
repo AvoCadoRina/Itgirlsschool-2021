@@ -21,4 +21,4 @@ for (var i = 0; selects.length; i++) {
     };
 };
 
-button.addEventListener('onclick', fff);
+button.addEventListener('click', fff);
