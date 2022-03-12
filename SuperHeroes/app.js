@@ -14,7 +14,6 @@ window.addEventListener('load', heroesApp);
 var selects = document.querySelectorAll('select');
 for (var i = 0; selects.length; i++) {
     let j = selects[i];
-
     function fff() {
         let value = j.options[j.selectedIndex].text;
         localStorage.setItem(j.id, value);
