@@ -9,6 +9,13 @@ function alerted() {
     let userPassword = document.getElementById('password');
     let userPasswordRepeat = document.getElementById('passwordRepeat');
     let alldata = []
+    let user = {
+        name: userName.value,
+        surname: userSurname.value,
+        email: userEmail.value,
+        username: userUserName.value,
+        password: userPassword.value
+    };
     if (userName.value == '' && userSurname.value == '' && userUserName.value == '' && userEmail.value == '' && userPassword.value == '' && userPasswordRepeat.value == '') {
         alert("Заполните поля, выделенные красным");
     } else if (userName.value == '' | userSurname.value == '' | userUserName.value == '' | userEmail.value == '' | userPassword.value == '' | userPasswordRepeat.value == '') {
@@ -37,6 +44,7 @@ function validation() {
     let passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     let surname = /^[A-ZА-яa-zа-я]+$/;
     let email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
     if (Password.value != PasswordRepeat.value) {
         alert("Passwords doesnot match!");
     } else if (!Password_str.match(passw)) {
