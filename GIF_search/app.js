@@ -1,8 +1,21 @@
+'use strict'
 var button = document.getElementById("Search");
+let jsondata;
 
-function SearchGif() {
-    let searchWord = document.getElementById("gifs").value;
-    $("#Find").append("<a href=\"https://api.giphy.com/v1/gifs/search?api_key=e09RMy99QnReIE2de9gcvTYC6FhYev4O&q=" + searchWord + "&limit=5&offset=0&rating=g&lang=en\"> Показать результаты </a>");
+function searchGif() {
+    let UserWord = document.getElementById('gifs').value;
+    let url = 'https://api.giphy.com/v1/gifs/search?api_key=wMqvSK3gHL65KRyFxTxyrNCUCJbskKtb&q=' + UserWord + 'go&limit=20&offset=0';
+    fetch(url).then(
+        function(u) { return u.json(); }
+    ).then(
+        function(json) {
+            jsondata = json.data;
+            console.log(json);
+            for (let i = 0; i < 5; i++) {
+                $("#Find").append("<div>" + "<img src=" + jsondata[i].url + ">" + "</div");
+            }
+        }
+    )
 };
 
-button.addEventListener("click", SearchGif);
+button.addEventListener("click", searchGif);
