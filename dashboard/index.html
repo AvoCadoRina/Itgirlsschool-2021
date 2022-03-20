@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1> Привет, Катя</h1>
+        <h2>Твои задачи</h2>
+        <div class="tasks" id="tasks">
+            <div><label for="taskType"> Раздел задачи</label>
+                <input type="text" id="taskType" required>
+            </div>
+            <div><label for="taskName"> Название задачи</label>
+                <input type="text" id="taskName" required>
+            </div>
+            <div><label for="TaskColor">Цвет события </label>
+                <select id="TaskColor">
+                    <option value="blue">Синий</option>
+                    <option value="red">Красный</option>
+                    <option value="green">Зеленый</option>
+                    <option value="yellow">Желтый</option>
+                </select>
+            </div>
+            <div><label for="taskDate"> Дата исполнения</label>
+                <input type="date" id="taskDate" required>
+            </div>
+            <input class="button" type="submit" value="Отправить" id="button" />
+        </div>
+        <div id="calendar"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"></script>
+    <script type="text/JavaScript" src="https://MomentJS.com/downloads/moment-with-locales.js"></script>
+    <script src="app.js"></script>
+    <script src="task.js"></script>
+
+</body>
+
+</html>
